@@ -50,7 +50,7 @@ class Earnings_Calendar_Yahoo {
             }
             
         }
-
+        // Delay ekle
         fetchDaysBetween = async  (fromDate = this.today, toDate = this.nextWeek) => {
             try {
                 const dates = getDays(fromDate, new Date(toDate));
