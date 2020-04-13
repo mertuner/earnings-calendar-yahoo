@@ -33,10 +33,10 @@ npm install yahoo-earnings-calendar
     .catch(err => console.log(err)) 
 ```
 ##### parameters
-    - `day` (`string`) - 'YYYY-MM-DD'
+- `day` (`string`) - 'YYYY-MM-DD' - By default it set to today
 
 ##### returns
-    - `Promise` - Array of companies that have earning reports on a specific day
+- `Promise` - Array of companies that have earning reports on a specific day
 
 ### get earning on a specific date range
 
@@ -51,11 +51,11 @@ npm install yahoo-earnings-calendar
     .catch(err => console.log(err)) 
 ```
 ##### parameters
-    - `fromDate` (`string`) - 'YYYY-MM-DD'
-    - `toDate` (`string`) - 'YYYY-MM-DD'
+- `fromDate` (`string`) - 'YYYY-MM-DD' - By default it set to today
+- `toDate` (`string`) - 'YYYY-MM-DD' - By default it set to 7 days ahead from today
 
 ##### returns
-    - `Promise` - Array of companies that have earning reports on a specific date range
+- `Promise` - Array of companies that have earning reports on a specific date range
 
 
 ### Set delay for consecutive requests
@@ -81,19 +81,19 @@ npm install yahoo-earnings-calendar
 ```
 
 ##### argument
-    - `delay` (`Number`) - delay factor in miliseconds
+- `delay` (`Number`) - delay factor in miliseconds
 
 
 ### Data attributes
-    - If no earning report on this day
-        - day -- 'YYYY-MM-DD'
-        - dayMessage: 'No earnings on this day''
-    - Otherwise
-        - ticker -- Symbol (e.g, SBUX)
-        - name -- Company Name (e.g, Starbucks)
-        - ect -- Earnings Call Time (e.g, Before Market Open)
-        - epsEstimate -- Earning Per Share Estimate (e.g, 0.63)
-        - suprise -- Suprise Percentage (e.g +58.63)
+- If no earning report on this day
+    - day -- 'YYYY-MM-DD'
+    - dayMessage: 'No earnings on this day''
+- Otherwise
+    - ticker -- Symbol (e.g, SBUX)
+    - name -- Company Name (e.g, Starbucks)
+    - ect -- Earnings Call Time (e.g, Before Market Open)
+    - epsEstimate -- Earning Per Share Estimate (e.g, 0.63)
+    - suprise -- Suprise Percentage (e.g +58.63)
 
 
 ## Author
