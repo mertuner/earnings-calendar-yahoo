@@ -56,7 +56,7 @@ class Earnings_Calendar_Yahoo {
             }
                 return companies;
             } catch (error) {
-                throw new Error('ftd', error);
+                throw new Error(error);
             }
             
         }
