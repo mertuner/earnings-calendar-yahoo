@@ -20,6 +20,8 @@ npm install yahoo-earnings-calendar
     .then(res => console.log(res))
     .catch(err => console.log(err)) 
 ```
+##### returns
+- `Promise` - Array of companies that have earning reports on today
 
 ### get earning on a specific date
     
