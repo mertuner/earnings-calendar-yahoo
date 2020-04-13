@@ -1,0 +1,21 @@
+{
+  "name": "yahoo-earnings-calendar",
+  "version": "1.0.0",
+  "description": "This package fetches earnings calendar data from yahoo",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "earnings",
+    "calendar",
+    "stock",
+    "earning"
+  ],
+  "author": "Mert Uner",
+  "license": "MIT",
+  "dependencies": {
+    "canvas": "^2.6.1",
+    "jsdom": "^16.2.2"
+  }
+}
