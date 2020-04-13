@@ -59,7 +59,9 @@ npm install yahoo-earnings-calendar
 
 
 ### Set delay for consecutive requests
-    Delay can be set between requests. By default, it is null (No delay between requests). You can overwrite the default value by passing an argument to constructor
+Delay can be set between requests. By default, it is null (No delay between requests). 
+
+You can overwrite the default value by passing an argument to constructor
 
 ```javascript
     const Earnings_Calendar_Yahoo = require('yahoo-earnings-calendar');
