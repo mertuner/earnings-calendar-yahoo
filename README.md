@@ -1,6 +1,6 @@
 
 
-> Fetch earnings calendar data from Yahoo! Finance
+> Scrapes earnings calendar data from Yahoo! Finance
 
 ## Install
 
@@ -14,9 +14,9 @@ npm install earnings-calendar-yahoo
 
 ```javascript
     const Earnings_Calendar_Yahoo = require('earnings-calendar-yahoo');
-    yahooEarningsCalendar = new Earnings_Calendar_Yahoo();
+    earningsCalendarYahoo = new Earnings_Calendar_Yahoo();
 
-    yahooEarningsCalendar.fetchTheDay()
+    earningsCalendarYahoo.fetchTheDay()
     .then(res => console.log(res))
     .catch(err => console.log(err)) 
 ```
@@ -27,10 +27,10 @@ npm install earnings-calendar-yahoo
     
 ```javascript
     const Earnings_Calendar_Yahoo = require('earnings-calendar-yahoo');
-    yahooEarningsCalendar = new Earnings_Calendar_Yahoo();
+    earningsCalendarYahoo = new Earnings_Calendar_Yahoo();
     
     // date format always should be 'YYYY-MM-DD'. No other Date format supported for now.
-    yahooEarningsCalendar.fetchTheDay('2020-04-07')
+    earningsCalendarYahoo.fetchTheDay('2020-04-07')
     .then(res => console.log(res))
     .catch(err => console.log(err)) 
 ```
@@ -44,11 +44,11 @@ npm install earnings-calendar-yahoo
 
 ```javascript
     const Earnings_Calendar_Yahoo = require('earnings-calendar-yahoo');
-    yahooEarningsCalendar = new Earnings_Calendar_Yahoo();
+    earningsCalendarYahoo = new Earnings_Calendar_Yahoo();
     
     // date format always should be 'YYYY-MM-DD'. No other Date format supported for now.
     
-    yahooEarningsCalendar.fetchDaysBetween('2020-04-07', '2020-04-11')
+    earningsCalendarYahoo.fetchDaysBetween('2020-04-07', '2020-04-11')
     .then(res => console.log(res))
     .catch(err => console.log(err)) 
 ```
@@ -66,16 +66,16 @@ Delay can be set between requests. By default, it is null (No delay between requ
 You can overwrite the default value by passing an argument to constructor
 
 ```javascript
-    const Earnings_Calendar_Yahoo = require('yahoo-earnings-calendar');
+    const Earnings_Calendar_Yahoo = require('earnings-calendar-yahoo');
 
     delay = 2000;
 
-    yahooEarninsCalendar = new Earnings_Calendar_Yahoo(delay);
+    earningsCalendarYahoo = new Earnings_Calendar_Yahoo(delay);
 
     const sendMultipleRequests = async () => {
         const myArr = [];
         for(let i = 0; i<2; i++){
-            const dayEarnings = await yahooEarninsCalendar.fetchTheDay();
+            const dayEarnings = await earningsCalendarYahoo.fetchTheDay();
             myArr.push(...dayEarnings);
         }
         console.log(myArr);
