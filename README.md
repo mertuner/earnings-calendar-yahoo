@@ -13,7 +13,7 @@ npm install earnings-calendar-yahoo
 ### get today's earnings calendar
 
 ```javascript
-    const Earnings_Calendar_Yahoo = require('yahoo-earnings-calendar');
+    const Earnings_Calendar_Yahoo = require('earnings-calendar-yahoo');
     yahooEarningsCalendar = new Earnings_Calendar_Yahoo();
 
     yahooEarningsCalendar.fetchTheDay()
@@ -26,7 +26,7 @@ npm install earnings-calendar-yahoo
 ### get earnings on a specific date
     
 ```javascript
-    const Earnings_Calendar_Yahoo = require('yahoo-earnings-calendar');
+    const Earnings_Calendar_Yahoo = require('earnings-calendar-yahoo');
     yahooEarningsCalendar = new Earnings_Calendar_Yahoo();
     
     // date format always should be 'YYYY-MM-DD'. No other Date format supported for now.
@@ -43,7 +43,7 @@ npm install earnings-calendar-yahoo
 ### get earnings on a specific date range
 
 ```javascript
-    const Earnings_Calendar_Yahoo = require('yahoo-earnings-calendar');
+    const Earnings_Calendar_Yahoo = require('earnings-calendar-yahoo');
     yahooEarningsCalendar = new Earnings_Calendar_Yahoo();
     
     // date format always should be 'YYYY-MM-DD'. No other Date format supported for now.
