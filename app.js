@@ -1,22 +1,17 @@
 const jsdom = require("jsdom");
+const { getDays } =  require("./rangeHelper");
+
+
 const { JSDOM } = jsdom;
-
-
 const BASE_URL = 'https://finance.yahoo.com/calendar/earnings?day=';
 
-const getDays = (startDay, endDay) => {
-    const dates = [];
-    for(let dt = new Date(startDay); dt <= endDay; dt.setDate(dt.getDate()+1)){
-        dates.push(new Date(dt).toISOString().split('T')[0]);
-    }
-    return dates;
-};
+
 
 class Earnings_Calendar_Yahoo {
 
     constructor(){
-        this.today = new Date(date.getTime() - (date.getTimezoneOffset() * 60000)).toISOString().split('T')[0];
-        this.nextWeek = new Date((date.getTime() - (date.getTimezoneOffset() * 60000)) + 604800000).toISOString().split('T')[0];
+        this.today = new Date(new Date().getTime() - (new Date().getTimezoneOffset() * 60000)).toISOString().split('T')[0];
+        this.nextWeek = new Date((new Date().getTime() - (new Date().getTimezoneOffset() * 60000)) + 604800000).toISOString().split('T')[0];
     }
 
     print = () => {
@@ -76,5 +71,11 @@ class Earnings_Calendar_Yahoo {
             }
         }
 }
+
+let ab = new Earnings_Calendar_Yahoo();
+
+ab.fetchTheDay()
+.then(res => console.log(res))
+.catch()
 
 module.exports = Earnings_Calendar_Yahoo;
