@@ -5,7 +5,7 @@
 ## Install
 
 ```sh
-npm install yahoo-earnings-calendar
+npm install earnings-calendar-yahoo
 ```
 
 ##  Usage
