@@ -15,6 +15,7 @@ class Earnings_Calendar_Yahoo {
         this.delay = delay;
     }
 
+    // Fetches earnings on a spesific day
     fetchTheDay = async (day = this.today) => {
 
         // Sleep if applicable
@@ -54,7 +55,8 @@ class Earnings_Calendar_Yahoo {
         }
 
     }
-    // Delay ekle
+
+    // Fetches earnings on a spesific date range
     fetchDaysBetween = async (fromDate = this.today, toDate = this.nextWeek) => {
         try {
             const dates = getDays(fromDate, new Date(toDate));
