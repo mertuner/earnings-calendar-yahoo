@@ -48,7 +48,7 @@ npm install yahoo-earnings-calendar
     
     // date format always should be 'YYYY-MM-DD'. No other Date format supported for now.
     
-    yahooEarningsCalendar.fetchTheDay()
+    yahooEarningsCalendar.fetchDaysBetween('2020-04-07', '2020-04-11')
     .then(res => console.log(res))
     .catch(err => console.log(err)) 
 ```
