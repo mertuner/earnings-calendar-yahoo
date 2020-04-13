@@ -2,7 +2,7 @@
   "name": "yahoo-earnings-calendar",
   "version": "1.0.0",
   "description": "This package fetches earnings calendar data from yahoo",
-  "main": "app.js",
+  "main": "earningsCalendarYahoo.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,7 +10,9 @@
     "earnings",
     "calendar",
     "stock",
-    "earning"
+    "earning",
+    "yahoo",
+    "finance"
   ],
   "author": "Mert Uner",
   "license": "MIT",
