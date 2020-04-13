@@ -13,11 +13,6 @@ class Earnings_Calendar_Yahoo {
         this.today = new Date(new Date().getTime() - (new Date().getTimezoneOffset() * 60000)).toISOString().split('T')[0];
         this.nextWeek = new Date((new Date().getTime() - (new Date().getTimezoneOffset() * 60000)) + 604800000).toISOString().split('T')[0];
     }
-
-    print = () => {
-        console.log(this.today);
-        console.log(this.nextWeek);
-    }
     
     fetchTheDay = async (day = this.today) => {
             try {
@@ -56,7 +51,7 @@ class Earnings_Calendar_Yahoo {
             
         }
 
-        fetchWeek = async  (fromDate = this.today, toDate = this.nextWeek) => {
+        fetchDaysBetween = async  (fromDate = this.today, toDate = this.nextWeek) => {
             try {
                 const dates = getDays(fromDate, new Date(toDate));
                 console.log(dates);
