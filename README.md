@@ -23,7 +23,7 @@ npm install yahoo-earnings-calendar
 ##### returns
 - `Promise` - Array of companies that have earning reports on today
 
-### get earning on a specific date
+### get earnings on a specific date
     
 ```javascript
     const Earnings_Calendar_Yahoo = require('yahoo-earnings-calendar');
@@ -40,7 +40,7 @@ npm install yahoo-earnings-calendar
 ##### returns
 - `Promise` - Array of companies that have earning reports on a specific day
 
-### get earning on a specific date range
+### get earnings on a specific date range
 
 ```javascript
     const Earnings_Calendar_Yahoo = require('yahoo-earnings-calendar');
