@@ -67,10 +67,4 @@ class Earnings_Calendar_Yahoo {
         }
 }
 
-let ab = new Earnings_Calendar_Yahoo();
-
-ab.fetchTheDay()
-.then(res => console.log(res))
-.catch()
-
 module.exports = Earnings_Calendar_Yahoo;
