@@ -1,10 +1,4 @@
-<h1 align="center">Welcome to yahoo-earnings-calendar 👋</h1>
-<p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
-  <a href="#" target="_blank">
-    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
-  </a>
-</p>
+
 
 > Fetch earnings calendar data from Yahoo! Finance
 
@@ -13,14 +7,6 @@
 ```sh
 npm install yahoo-earnings-calendar
 ```
-
-## Author
-
-👤 **Mert Uner**
-
-* Website: https://mertuner.web.app/
-* Github: [@mertuner](https://github.com/mertuner)
-* LinkedIn: [@mertuner](https://linkedin.com/in/mertuner)
 
 ##  Usage
 
@@ -47,10 +33,10 @@ npm install yahoo-earnings-calendar
     .catch(err => console.log(err)) 
 ```
 ##### parameters
-    * `day` (`string`) - 'YYYY-MM-DD'
+    - `day` (`string`) - 'YYYY-MM-DD'
 
 ##### returns
-    * `Promise` - Array of companies that have earning reports on a specific day
+    - `Promise` - Array of companies that have earning reports on a specific day
 
 ### get earning on a specific date range
 
@@ -65,11 +51,11 @@ npm install yahoo-earnings-calendar
     .catch(err => console.log(err)) 
 ```
 ##### parameters
-    * `fromDate` (`string`) - 'YYYY-MM-DD'
-    * `toDate` (`string`) - 'YYYY-MM-DD'
+    - `fromDate` (`string`) - 'YYYY-MM-DD'
+    - `toDate` (`string`) - 'YYYY-MM-DD'
 
 ##### returns
-    * `Promise` - Array of companies that have earning reports on a specific date range
+    - `Promise` - Array of companies that have earning reports on a specific date range
 
 
 ### Set delay for consecutive requests
@@ -95,17 +81,23 @@ npm install yahoo-earnings-calendar
 ```
 
 ##### argument
-    * `delay` (`Number`) - delay factor in miliseconds
+    - `delay` (`Number`) - delay factor in miliseconds
 
 
 ### Data attributes
-    * If no earning report on this day
-        * day -- 'YYYY-MM-DD'
-        * dayMessage: 'No earnings on this day''
-    * Otherwise
-        * ticker -- Symbol (e.g, SBUX)
-        * name -- Company Name (e.g, Starbucks)
-        * ect -- Earnings Call Time (e.g, Before Market Open)
-        * epsEstimate -- Earning Per Share Estimate (e.g, 0.63)
-        * suprise -- Suprise Percentage (e.g +58.63)
+    - If no earning report on this day
+        - day -- 'YYYY-MM-DD'
+        - dayMessage: 'No earnings on this day''
+    - Otherwise
+        - ticker -- Symbol (e.g, SBUX)
+        - name -- Company Name (e.g, Starbucks)
+        - ect -- Earnings Call Time (e.g, Before Market Open)
+        - epsEstimate -- Earning Per Share Estimate (e.g, 0.63)
+        - suprise -- Suprise Percentage (e.g +58.63)
 
+
+## Author
+
+--Mert Uner--
+- Website: https://mertuner.web.app/
+- LinkedIn: [@mertuner](https://linkedin.com/in/mertuner)
