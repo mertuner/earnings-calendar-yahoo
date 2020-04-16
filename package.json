@@ -1,6 +1,6 @@
 {
   "name": "earnings-calendar-yahoo",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "This package fetches earnings calendar data from yahoo",
   "main": "earningsCalendarYahoo.js",
   "scripts": {
