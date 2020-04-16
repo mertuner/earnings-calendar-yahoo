@@ -13,12 +13,12 @@ npm install earnings-calendar-yahoo
 ### get today's earnings calendar
 
 ```javascript
-    const Earnings_Calendar_Yahoo = require('earnings-calendar-yahoo');
-    earningsCalendarYahoo = new Earnings_Calendar_Yahoo();
+const Earnings_Calendar_Yahoo = require('earnings-calendar-yahoo');
+const earningsCalendarYahoo = new Earnings_Calendar_Yahoo();
 
-    earningsCalendarYahoo.fetchTheDay()
-    .then(res => console.log(res))
-    .catch(err => console.log(err)) 
+earningsCalendarYahoo.fetchTheDay()
+.then(res => console.log(res))
+.catch(err => console.log(err)) 
 ```
 ##### returns
 - `Promise` - Array of companies that have earning reports on today
@@ -26,13 +26,13 @@ npm install earnings-calendar-yahoo
 ### get earnings on a specific date
     
 ```javascript
-    const Earnings_Calendar_Yahoo = require('earnings-calendar-yahoo');
-    earningsCalendarYahoo = new Earnings_Calendar_Yahoo();
+const Earnings_Calendar_Yahoo = require('earnings-calendar-yahoo');
+const earningsCalendarYahoo = new Earnings_Calendar_Yahoo();
     
-    // date format always should be 'YYYY-MM-DD'. No other Date format supported for now.
-    earningsCalendarYahoo.fetchTheDay('2020-04-07')
-    .then(res => console.log(res))
-    .catch(err => console.log(err)) 
+// date format always should be 'YYYY-MM-DD'. No other Date format supported for now.
+earningsCalendarYahoo.fetchTheDay('2020-04-07')
+.then(res => console.log(res))
+.catch(err => console.log(err)) 
 ```
 ##### parameters
 - `day` (`string`) - 'YYYY-MM-DD' - By default it set to today
@@ -43,14 +43,14 @@ npm install earnings-calendar-yahoo
 ### get earnings on a specific date range
 
 ```javascript
-    const Earnings_Calendar_Yahoo = require('earnings-calendar-yahoo');
-    earningsCalendarYahoo = new Earnings_Calendar_Yahoo();
+const Earnings_Calendar_Yahoo = require('earnings-calendar-yahoo');
+const earningsCalendarYahoo = new Earnings_Calendar_Yahoo();
     
-    // date format always should be 'YYYY-MM-DD'. No other Date format supported for now.
+// date format always should be 'YYYY-MM-DD'. No other Date format supported for now.
     
-    earningsCalendarYahoo.fetchDaysBetween('2020-04-07', '2020-04-11')
-    .then(res => console.log(res))
-    .catch(err => console.log(err)) 
+earningsCalendarYahoo.fetchDaysBetween('2020-04-07', '2020-04-11')
+.then(res => console.log(res))
+.catch(err => console.log(err)) 
 ```
 ##### parameters
 - `fromDate` (`string`) - 'YYYY-MM-DD' - By default it set to today
@@ -66,20 +66,20 @@ Delay can be set between requests. By default, it is null (No delay between requ
 You can overwrite the default value by passing an argument to constructor
 
 ```javascript
-    const Earnings_Calendar_Yahoo = require('earnings-calendar-yahoo');
+const Earnings_Calendar_Yahoo = require('earnings-calendar-yahoo');
 
-    delay = 2000;
+const delay = 2000;
 
-    earningsCalendarYahoo = new Earnings_Calendar_Yahoo(delay);
+earningsCalendarYahoo = new Earnings_Calendar_Yahoo(delay);
 
-    const sendMultipleRequests = async () => {
-        const myArr = [];
-        for(let i = 0; i<2; i++){
-            const dayEarnings = await earningsCalendarYahoo.fetchTheDay();
-            myArr.push(...dayEarnings);
-        }
-        console.log(myArr);
+const sendMultipleRequests = async () => {
+    const myArr = [];
+    for(let i = 0; i<2; i++){
+        const dayEarnings = await earningsCalendarYahoo.fetchTheDay();
+        myArr.push(...dayEarnings);
     }
+    console.log(myArr);
+}
 
     sendMultipleRequests();
 ```
