@@ -42,11 +42,11 @@ class Earnings_Calendar_Yahoo {
                     epsEstimate: '',
                     suprise: ''
                 }
-                company.ticker = row.children[0].children[0].textContent;
+                company.ticker = row.children[0].textContent;
                 company.name = row.children[1].textContent;
                 company.ect = row.children[2].textContent ? row.children[2].textContent : row.children[2].children[0].textContent;
                 company.epsEstimate = row.children[3].textContent;
-                company.suprise = row.children[5].children[0].textContent;
+                company.suprise = row.children[5].textContent;
                 companies.push(company);
             }
             return companies;
